@@ -56,7 +56,7 @@ def calculate():
         text1.insert(0.0,  str(time) + " minutes at 200 degrees centigrade \n (180 fan) or gas mark 6.")   
     except ValueError as e:
         text1.delete(0.0, END)
-        text1.insert(0.0, str(e))
+        text1.insert(0.0, "Please enter a numeric value in the weight box.")
 
 # Create the buttons
 button1 = Button(root, text="Calculate", command=calculate)
