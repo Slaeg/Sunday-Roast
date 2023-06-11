@@ -41,19 +41,22 @@ def calculate():
         if grams <= 0:
             raise ValueError("Please enter a value greater than 0.")
         
-        # Determine which calculation to use
+        # Determine which calculation and temperature to use
         if meat_var.get() == 'Chicken':
             time = (grams/1000)*45+20
+            temperature = "200 degrees centigrade (180 fan) or gas mark 6."
         elif meat_var.get() == 'Beef':
-            time = (grams/1000)*60+30  # Modify these calculations as needed
+            time = (grams/1000)*60+30
+            temperature = "180 degrees centigrade (160 fan) or gas mark 4."  # Modify as needed
         elif meat_var.get() == 'Pork':
-            time = (grams/1000)*70+35  # Modify these calculations as needed
+            time = (grams/1000)*70+35
+            temperature = "190 degrees centigrade (170 fan) or gas mark 5."  # Modify as needed
         else:
             raise ValueError("Please select a type of meat.")
         
         time = round(time)
         text1.delete(0.0, END)
-        text1.insert(0.0,  str(time) + " minutes at 200 degrees centigrade \n (180 fan) or gas mark 6.")   
+        text1.insert(0.0, str(time) + " minutes at " + temperature)  
     except ValueError as e:
         text1.delete(0.0, END)
         text1.insert(0.0, "Please enter a numeric value in the weight box.")
