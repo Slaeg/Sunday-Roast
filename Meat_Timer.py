@@ -8,6 +8,10 @@ root.geometry("500x300")
 # UI Improvements
 root.configure(bg='light grey') # Changes the background color
 
+# Center the grid
+root.grid_columnconfigure(0, weight=1)
+root.grid_rowconfigure(0, weight=1) 
+
 # Label modification
 label1 = Label(root, text="Roasting Timer", bg='light grey', font=("Helvetica", 16))
 label1.grid(row=0, column=0, pady=10) # Add padding for the label
