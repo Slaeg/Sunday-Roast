@@ -34,7 +34,7 @@ entry1 = Entry(root)
 entry1.grid(row=2, column=1, pady=10)
 
 # Creating the text box
-text1 = Text(root, height=5, width=40)
+text1 = Text(root, height=5, width=40, wrap=WORD)
 text1.grid(row=4, column=0, columnspan=2, pady=10)
 
 # Modify the error handling and calculation for different meats
