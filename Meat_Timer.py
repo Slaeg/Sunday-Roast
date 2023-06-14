@@ -33,6 +33,9 @@ meat_dropdown.current(0)  # sets the default value
 entry1 = Entry(root)
 entry1.grid(row=2, column=1, pady=10)
 
+# bind the Enter key to the calculate function
+entry1.bind('<Return>', lambda event: calculate())
+
 # Creating the text box
 text1 = Text(root, height=5, width=40, wrap=WORD)
 text1.grid(row=4, column=0, columnspan=2, pady=10)
