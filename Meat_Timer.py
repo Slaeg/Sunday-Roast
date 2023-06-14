@@ -24,7 +24,7 @@ label3 = Label(root, text="Select the type of meat:", bg='light grey')
 label3.grid(row=1, column=0, pady=10)
 
 meat_var = StringVar()
-meat_dropdown = ttk.Combobox(root, textvariable=meat_var)
+meat_dropdown = ttk.Combobox(root, textvariable=meat_var, state='readonly')
 meat_dropdown['values'] = ('Chicken', 'Beef', 'Pork')
 meat_dropdown.grid(row=1, column=1)
 meat_dropdown.current(0)  # sets the default value
